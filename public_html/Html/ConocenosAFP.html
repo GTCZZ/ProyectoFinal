@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conócenos - AFP Seguro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="../CSS/Style.css" rel="stylesheet" type="text/css"/>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="LoginAFP.html" class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>AFP <span>Seguro</span></h1>
+                </a>
+                
+                <nav class="public-menu">
+                    <a href="LoginAFP.html">Inicio</a>
+                    <a href="SegurosAFP.html">Seguros</a>
+                    <a href="ConocenosAFP.html" class="active">Conócenos</a>
+                </nav>
+
+                <div class="actions">
+                    <a href="#loginModal" class="btn login">
+                        <i class="fas fa-user"></i> Iniciar sesión
+                    </a>
+                    <a href="#registerModal" class="btn register">
+                        Crear cuenta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero hero-conocenos">
+        <div class="container">
+            <div class="hero-center">
+                <h2>Más de 25 años protegiendo el futuro de los peruanos</h2>
+                <p>Conoce nuestra historia, nuestro propósito y al equipo que trabaja todos los días para cuidar tu jubilación.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            
+            <div class="modal-header">
+                <i class="fas fa-lock"></i>
+                <h2>Acceso Seguro</h2>
+                <p>Ingresa con tu cuenta AFP</p>
+            </div>
+
+            <div class="modal-form">
+                <label>Tipo de documento</label>
+                <select>
+                    <option value="DNI">DNI</option>
+                    <option value="PASAPORTE">Pasaporte</option>
+                </select>
+
+                <label>Número de documento</label>
+                <input type="text" placeholder="Ingresa tu DNI o Pasaporte">
+
+                <label>Contraseña</label>
+                <input type="password" placeholder="Ingresa tu contraseña">
+
+                <a href="PrincipalAFP.html"><button class="btn-login-modal">Iniciar sesión</button></a>
+
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+                <div class="register-link">
+                    ¿No tienes una cuenta? 
+                    <a href="#registerModal">Regístrate aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            
+            <div class="modal-header">
+                <i class="fas fa-user-plus"></i>
+                <h2>Crear Cuenta</h2>
+                <p>Únete a AFP Seguro y protege tu futuro</p>
+            </div>
+
+            <div class="modal-form">
+                <label>Tipo de documento</label>
+                <select>
+                    <option value="DNI">DNI</option>
+                    <option value="PASAPORTE">Pasaporte</option>
+                </select>
+
+                <label>Número de documento</label>
+                <input type="text" placeholder="Ej: 76543212">
+
+                <label>Nombres completos</label>
+                <input type="text" placeholder="Ingresa tus nombres">
+
+                <label>Apellidos completos</label>
+                <input type="text" placeholder="Ingresa tus apellidos">
+
+                <label>Fecha de nacimiento</label>
+                <input type="date">
+
+                <label>Género</label>
+                <select>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+                <label>Correo electrónico</label>
+                <input type="email" placeholder="ejemplo@correo.com">
+
+                <label>Teléfono / Celular</label>
+                <input type="tel" placeholder="Ej: 987 654 321">
+
+                <label>Dirección</label>
+                <input type="text" placeholder="Ingresa tu dirección actual">
+
+                <label>Contraseña</label>
+                <input type="password" placeholder="Crea una contraseña segura">
+
+                <label>Confirmar contraseña</label>
+                <input type="password" placeholder="Repite tu contraseña">
+
+                <a href="PrincipalAFP.html"><button class="btn-register-modal">Crear mi cuenta</button></a>
+
+                <div class="register-link">
+                    ¿Ya tienes una cuenta? 
+                    <a href="#loginModal">Inicia sesión aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== HISTORIA ===================== -->
+    <section class="historia-section">
+        <div class="historia-grid">
+            <div class="historia-texto">
+                <h2>Nuestra historia</h2>
+                <p>AFP Seguro nació con un propósito claro: ayudar a cada peruano a construir un retiro digno y tranquilo. Desde nuestros inicios, hemos combinado experiencia financiera con un trato cercano y transparente con cada uno de nuestros afiliados.</p>
+                <p>A lo largo de los años fuimos creciendo junto a las familias que nos confiaron su fondo de pensiones, adaptándonos a sus necesidades y a los cambios del país, siempre con el mismo compromiso: que tu futuro esté en buenas manos.</p>
+                <p>Hoy somos una de las administradoras con mayor respaldo y rentabilidad del mercado, reconocidos por nuestra solidez, innovación digital y atención personalizada.</p>
+            </div>
+            <div class="historia-numeros">
+                <div class="numero-card">
+                    <span class="numero">25+</span>
+                    <span class="numero-label">Años de experiencia</span>
+                </div>
+                <div class="numero-card">
+                    <span class="numero">+800,000</span>
+                    <span class="numero-label">Afiliados activos</span>
+                </div>
+                <div class="numero-card">
+                    <span class="numero">8.45%</span>
+                    <span class="numero-label">Rentabilidad neta anual</span>
+                </div>
+                <div class="numero-card">
+                    <span class="numero">24/7</span>
+                    <span class="numero-label">Atención al afiliado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== MISIÓN Y VISIÓN ===================== -->
+    <section class="mision-vision-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro propósito</h2>
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Misión</h3>
+                    <p>Administrar de forma segura y rentable el fondo de pensiones de nuestros afiliados, brindándoles información clara y un acompañamiento cercano en cada etapa de su vida laboral.</p>
+                </div>
+                <div class="mv-card">
+                    <div class="mv-icon"><i class="fas fa-binoculars"></i></div>
+                    <h3>Visión</h3>
+                    <p>Ser la AFP líder en confianza y rentabilidad en el Perú, reconocida por transformar la manera en que las personas planifican y disfrutan su jubilación.</p>
+                </div>
+                <div class="mv-card">
+                    <div class="mv-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Compromiso</h3>
+                    <p>Cuidamos cada sol que nos confías como si fuera nuestro, con procesos transparentes y decisiones de inversión responsables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== VALORES ===================== -->
+    <section class="valores-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros valores</h2>
+            <div class="valores-grid">
+                <div class="valor-card">
+                    <div class="valor-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Seguridad</h4>
+                    <p>Protegemos tu fondo con los más altos estándares.</p>
+                </div>
+                <div class="valor-card">
+                    <div class="valor-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Transparencia</h4>
+                    <p>Información clara, sin letras pequeñas.</p>
+                </div>
+                <div class="valor-card">
+                    <div class="valor-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>Confianza</h4>
+                    <p>Construimos relaciones de largo plazo con cada afiliado.</p>
+                </div>
+                <div class="valor-card">
+                    <div class="valor-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h4>Innovación</h4>
+                    <p>Herramientas digitales para que gestiones tu futuro fácilmente.</p>
+                </div>
+                <div class="valor-card">
+                    <div class="valor-icon"><i class="fas fa-users"></i></div>
+                    <h4>Cercanía</h4>
+                    <p>Atención humana y personalizada en cada trámite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EQUIPO ===================== -->
+    <section class="equipo-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro equipo de inversiones</h2>
+            <div class="equipo-grid">
+                <div class="equipo-card">
+                    <div class="equipo-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>María Fernández</h4>
+                    <span class="cargo">Gerente General</span>
+                    <p>Más de 15 años liderando estrategias de inversión responsable en el sistema previsional.</p>
+                </div>
+                <div class="equipo-card">
+                    <div class="equipo-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>Carlos Ramírez</h4>
+                    <span class="cargo">Jefe de Inversiones</span>
+                    <p>Especialista en mercados de capitales, enfocado en maximizar la rentabilidad de tu fondo.</p>
+                </div>
+                <div class="equipo-card">
+                    <div class="equipo-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h4>Lucía Torres</h4>
+                    <span class="cargo">Jefa de Atención al Afiliado</span>
+                    <p>Lidera al equipo de soporte para que cada consulta tenga una respuesta rápida y clara.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="cta-conocenos">
+        <div class="container">
+            <h2>Tu futuro financiero empieza hoy</h2>
+            <p>Únete a las miles de personas que ya confían en AFP Seguro.</p>
+            <a href="#registerModal" class="btn-hero">Crear mi cuenta</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-footer">
+
+            <div class="footer-top">
+                <div class="support-info">
+                    <h3>Te atendemos las 24 horas</h3>
+                    <p>Haz tus trámites y consultas sin salir de casa</p>
+                </div>
+                <div class="support-options">
+                    <a href="#" class="support-btn"><i class="fas fa-comment-dots"></i> Chatea con Irene</a>
+                    <a href="#" class="support-btn"><i class="fas fa-envelope"></i> Envíanos un correo</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                
+                <div class="footer-column">
+                    <h4>Todo sobre AFP Seguro</h4>
+                    <a href="#">Grupo SURA</a>
+                    <a href="ConocenosAFP.html">Nosotros</a>
+                    <a href="#">Nuestro equipo de inversiones</a>
+                    <a href="#">Cumplimiento</a>
+                    <a href="#">Sostenibilidad</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Gobierno Corporativo</h4>
+                    <a href="#">Gobierno Corporativo</a>
+                    <a href="#">Accionistas</a>
+                    <a href="#">Directorio</a>
+                    <a href="#">Alta Gerencia</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legales</h4>
+                    <a href="#">Deberes y Derechos del Afiliado</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Libro de Reclamaciones</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contáctanos</h4>
+                    <p><strong>Línea gratuita:</strong> 0800 40 110</p>
+                    <p><strong>Arequipa:</strong> (054) 123 456</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 1234, Arequipa</p>
+                    
+                    <div class="app-download">
+                        <p><strong>Descarga nuestra app</strong></p>
+                        <div class="app-buttons">
+                            <a href="#" class="app-btn">Apple Store</a>
+                            <a href="#" class="app-btn">Google Play</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>AFP Seguro</span>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <p class="copyright">© 2026 AFP Seguro - Todos los derechos reservados</p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="../JAVASCRIPT/javascript.js"></script>
+</body>
+</html>

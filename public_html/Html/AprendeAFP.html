@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende cómo funciona tu AFP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../CSS/Style.css" type="text/css"/>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>AFP <span>Seguro</span></h1>
+                </a>
+                
+                <nav class="public-menu">
+                    <a href="LoginAFP.html">Inicio</a>
+                    <a href="SegurosAFP.html">Seguros</a>
+                    <a href="ConocenosAFP.html">Conócenos</a>
+                </nav>
+                
+                <div class="actions">
+                    <a href="#loginModal" class="btn login">
+                        <i class="fas fa-user"></i> Iniciar sesión
+                    </a>
+                    <a href="#registerModal" class="btn register">
+                        Crear cuenta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+
+        <div class="modal-header">
+            <i class="fas fa-lock"></i>
+            <h2>Acceso Seguro</h2>
+            <p>Ingresa con tu cuenta AFP</p>
+        </div>
+
+        <div class="modal-form">
+            <label>Tipo de documento</label>
+            <select>
+                <option value="DNI">DNI</option>
+                <option value="PASAPORTE">Pasaporte</option>
+            </select>
+
+            <label>Número de documento</label>
+            <input type="text" id="login-num-doc" placeholder="Ingresa tu DNI o Pasaporte">
+
+            <label>Contraseña</label>
+            <input type="password" id="login-pass" placeholder="Ingresa tu contraseña">
+
+            <button class="btn-login-modal">Iniciar sesión</button>
+
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+            <div class="register-link">
+                ¿No tienes una cuenta? 
+                <a href="#registerModal">Regístrate aquí</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+
+        <div class="modal-header">
+            <i class="fas fa-user-plus"></i>
+            <h2>Crear Cuenta</h2>
+            <p>Únete a AFP Seguro y protege tu futuro</p>
+        </div>
+
+        <div class="modal-form">
+            <label>Tipo de documento</label>
+            <select id="reg-tipo-doc">
+                <option value="DNI">DNI</option>
+                <option value="PASAPORTE">Pasaporte</option>
+            </select>
+
+            <label>Número de documento</label>
+            <input type="text" id="reg-num-doc" placeholder="Ej: 76543212">
+
+            <label>Nombres completos</label>
+            <input type="text" id="reg-nombres" placeholder="Ingresa tus nombres">
+
+            <label>Apellidos completos</label>
+            <input type="text" id="reg-apellidos" placeholder="Ingresa tus apellidos">
+
+            <label>Fecha de nacimiento</label>
+            <input type="date">
+
+            <label>Género</label>
+            <select>
+                <option value="">Selecciona una opción</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label>Correo electrónico</label>
+            <input type="email" id="reg-correo" placeholder="ejemplo@correo.com">
+
+            <label>Teléfono / Celular</label>
+            <input type="tel" id="reg-telefono" placeholder="Ej: 987 654 321">
+
+            <label>Dirección</label>
+            <input type="text" id="reg-direccion" placeholder="Ingresa tu dirección actual">
+
+            <label>Contraseña</label>
+            <input type="password" placeholder="Crea una contraseña segura">
+
+            <label>Confirmar contraseña</label>
+            <input type="password" id="reg-pass" placeholder="Repite tu contraseña">
+
+            <a href="PrincipalAFP.html"><button class="btn-register-modal">Crear mi cuenta</button></a>
+
+            <div class="register-link">
+                ¿Ya tienes una cuenta? 
+                <a href="#loginModal">Inicia sesión aquí</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <!-- HERO-->
+
+    <section class="aprender-hero">
+
+        <div class="aprender-overlay"></div>
+
+        <div class="aprender-contenido">
+
+            <span class="aprender-subtitulo">
+                EDUCACIÓN PREVISIONAL
+            </span>
+
+            <h1>¿Cómo funciona tu fondo de pensiones?</h1>
+
+            <p>
+                Descubre cómo tus aportes se convierten en un ahorro para tu jubilación
+                y conoce el proceso de administración de tu fondo.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="aprender-info">
+
+        <div class="aprender-texto">
+
+            <h2>¿Qué es una AFP?</h2>
+
+            <p>
+                Una Administradora de Fondos de Pensiones (AFP) es una entidad encargada
+                de administrar los aportes de los trabajadores con el objetivo de formar
+                un fondo para su jubilación.
+            </p>
+
+            <p>
+                A lo largo de tu vida laboral realizas aportes periódicos que se acumulan
+                en una cuenta personal y son administrados para favorecer el crecimiento
+                de tu ahorro.
+            </p>
+
+        </div>
+
+        <div class="aprender-imagen">
+            <img src="../Imagen/Aprender.jpg" alt="Cómo funciona una AFP">
+        </div>
+
+    </section>
+
+    <section class="aprender-proceso">
+
+        <h2>Conoce el proceso</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="numero-circular">1</div>
+                <h3>Realizas tus aportes</h3>
+                <p>
+                    Cada mes se destina un porcentaje de tu remuneración a tu fondo de pensiones.
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="numero-circular">2</div>
+                <h3>Se administra tu fondo</h3>
+                <p>
+                    Los aportes son gestionados mediante diferentes alternativas de inversión.
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="numero-circular">3</div>
+                <h3>Tu ahorro crece</h3>
+                <p>
+                    Con el paso del tiempo, tu fondo puede incrementarse gracias a los
+                    aportes realizados y su administración.
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="numero-circular">4</div>
+                <h3>Llega la jubilación</h3>
+                <p>
+                    Al finalizar tu etapa laboral podrás acceder a una pensión de acuerdo
+                    con el fondo acumulado.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="aprender-beneficios">
+
+        <h2>¿Por qué es importante conocer tu AFP?</h2>
+
+        <div class="beneficios-grid">
+
+            <div class="beneficio-card">
+
+                <h3>Mayor información</h3>
+                <p>
+                    Comprender cómo funciona tu fondo te ayuda a tomar mejores decisiones.
+                </p>
+            </div>
+
+            <div class="beneficio-card">
+
+                <h3>Planificación</h3>
+                <p>
+                    Conocer el sistema previsional permite organizar mejor tu futuro financiero.
+                </p>
+            </div>
+
+            <div class="beneficio-card">
+                <h3>Tranquilidad</h3>
+                <p>
+                    Saber cómo se administran tus aportes genera mayor confianza en tu ahorro.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="aprender-faq">
+
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq-item">
+            <button class="faq-question">¿Cada cuánto realizo aportes?</button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Los aportes se realizan de manera mensual durante tu vida laboral.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">¿Puedo consultar el estado de mi fondo?</button>
+
+            <div class="faq-answer">
+                <p>
+                    Sí. Puedes revisar periódicamente la información de tu fondo y tus aportes.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                ¿Por qué es importante empezar a ahorrar temprano?
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Mientras antes comiences a aportar, tendrás más tiempo para acumular ahorro para tu jubilación.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="aprender-contacto">
+
+        <h2>¿Deseas obtener más información?</h2>
+
+        <p>
+            Conoce nuestros servicios o inicia tu proceso de afiliación para comenzar a construir tu futuro.
+        </p>
+
+        <a href="#" class="plan-btn">Afiliarme ahora</a>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container-footer">
+
+            <div class="footer-top">
+                <div class="support-info">
+                    <h3>Te atendemos las 24 horas</h3>
+                    <p>Haz tus trámites y consultas sin salir de casa</p>
+                </div>
+                <div class="support-options">
+                    <a href="#" class="support-btn"><i class="fas fa-comment-dots"></i> Chatea con Irene</a>
+                    <a href="#" class="support-btn"><i class="fas fa-envelope"></i> Envíanos un correo</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                
+                <div class="footer-column">
+                    <h4>Todo sobre AFP Seguro</h4>
+                    <a href="#">Grupo SURA</a>
+                    <a href="ConocenosAFP.html">Nosotros</a>
+                    <a href="#">Nuestro equipo de inversiones</a>
+                    <a href="#">Cumplimiento</a>
+                    <a href="#">Sostenibilidad</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Gobierno Corporativo</h4>
+                    <a href="#">Gobierno Corporativo</a>
+                    <a href="#">Accionistas</a>
+                    <a href="#">Directorio</a>
+                    <a href="#">Alta Gerencia</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legales</h4>
+                    <a href="#">Deberes y Derechos del Afiliado</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Libro de Reclamaciones</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contáctanos</h4>
+                    <p><strong>Línea gratuita:</strong> 0800 40 110</p>
+                    <p><strong>Arequipa:</strong> (054) 123 456</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 1234, Arequipa</p>
+                    
+                    <div class="app-download">
+                        <p><strong>Descarga nuestra app</strong></p>
+                        <div class="app-buttons">
+                            <a href="#" class="app-btn">Apple Store</a>
+                            <a href="#" class="app-btn">Google Play</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>AFP Seguro</span>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <p class="copyright">© 2026 AFP Seguro - Todos los derechos reservados</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../JAVASCRIPT/javascript.js"></script>
+
+</body>
+
+</html>

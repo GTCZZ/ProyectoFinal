@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rentabilidad - AFP Seguro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="../CSS/Style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="bodyPrincipal">
+    
+  <header class="mainPrincipal-headerPrincipal">
+    <div class="top-bar">
+      <div class="logoPrincipal">
+        <div>
+          <span class="afp-name">AFP Seguro</span>
+          <span class="slogan">Tu futuro, nuestro compromiso</span>
+        </div>
+      </div>
+
+      <div class="user-section">
+        
+        <div class="user-profile">
+          <div class="user-info">
+            <div class="user-mainPrincipal-data">
+              <span class="greeting">Hola, Juan Pérez</span>
+              <span class="dni">DNI: 12345678</span>
+            </div>
+            <div class="user-fund-box">
+              <span class="user-fund-type"><i class="fas fa-chart-pie"></i> Tipo 2 - Moderado</span>
+            </div>
+          </div>
+          <div class="dropdown-arrow">▼</div>
+        </div>
+        
+        <div class="notification">
+          <span class="bell">🔔</span>
+          <span class="notification-count">3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondary-bar">
+      <div class="containerPrincipal-links">
+          <p class="aviso">Descubre nuestros nuevos planes de seguros especialmente hechos para ti</p>     
+      </div>
+    </div>
+  </header>
+
+  <div class="dashboard-containerPrincipal">
+    
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input">
+    <label for="sidebar-toggle" class="sidebar-toggle-label">
+      <i class="fas fa-sliders-h"></i> <span>Mostrar menú de cuenta</span>
+    </label>
+
+    <aside class="sidebar">
+      <div class="sidebar-headerPrincipal">
+        <h3>Mi Cuenta</h3>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="PrincipalAFP.html" class="nav-item"><i class="fas fa-chart-pie"></i> Resumen</a>
+        <a href="MiAhorroAFP.html" class="nav-item"><i class="fas fa-piggy-bank"></i> Mi Ahorro</a>
+        <a href="EstadoCuentaAFP.html" class="nav-item"><i class="fas fa-file-invoice-dollar"></i> Estado de Cuenta</a>        
+        <a href="MovimientosAFP.html" class="nav-item"><i class="fas fa-exchange-alt"></i> Movimientos</a>
+        <a href="RentabilidadAFP.html" class="nav-item active"><i class="fas fa-chart-line"></i> Rentabilidad</a>
+        <a href="TramitesAFP.html" class="nav-item"><i class="fas fa-folder-open"></i> Mis Trámites</a>
+        <a href="DocumentosAFP.html" class="nav-item"><i class="fas fa-file-alt"></i> Documentos</a>
+        <a href="ConfiguracionAFP.html" class="nav-item"><i class="fas fa-cog"></i> Configuración</a>
+        <div class="sidebar-divider"></div>
+        <a href="LoginAFP.html" class="nav-item logoPrincipalut"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+      </nav>
+      
+      <div class="sidebar-footerPrincipal">
+        <div class="help-card">
+          <i class="fas fa-headset help-icon"></i>
+          <h4>¿Necesitas ayuda?</h4>
+          <p>Estamos listos para asesorarte en lo que necesites.</p>
+          <button class="contact-btn">Contáctanos</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="mainPrincipal-content">
+      <div class="headerPrincipal-content">
+        <h1>Rentabilidad de mi Fondo</h1>
+        <p class="subtitle">Conoce cuánto ha crecido tu dinero gracias a las inversiones de AFP Seguro.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card-metric" style="border-left: 4px solid #1e3a8a;">
+          <h4>Total de Aportes (Tu dinero)</h4>
+          <h2 id="renta-aportes">S/ 0.00</h2>
+        </div>
+        
+        <div class="card-metric" style="border-left: 4px solid #22c55e;">
+          <h4>Ganancia Generada (Rentabilidad)</h4>
+          <h2 id="renta-ganancia" class="positivo">S/ 0.00</h2>
+        </div>
+
+        <div class="card-metric" style="border-left: 4px solid #00b4d8; background: #f0f9ff;">
+            <h4>Saldo Final Acumulado</h4><br>
+          <h2 id="renta-total">S/ 0.00</h2>
+        </div>
+
+        <div class="card-metric" style="border-left: 4px solid #a855f7;">
+          <h4>Tasa de Crecimiento</h4>
+          <h2 class="positive" id="renta-porcentaje">+8.45%</h2>
+          <p class="timeframe">Histórico anualizado</p>
+        </div>
+      </div>
+
+      <div class="charts-row" style="grid-template-columns: 1fr; margin-top: 30px;">
+        <div class="chart-box">
+          <div class="chart-headerPrincipal">
+            <h3><i class="fas fa-chart-bar"></i> Comparativa: Aportes vs Ganancias</h3>
+          </div>
+          <div style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+            <canvas id="graficoRentabilidadNativo" width="600" height="250" style="max-width: 100%; border-bottom: 2px solid #e2e8f0; border-left: 2px solid #e2e8f0;"></canvas>
+          </div>
+          
+          <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px; font-size: 0.9rem;">
+            <div><span style="display:inline-block; width:15px; height:15px; background:#1e3a8a; margin-right:5px; border-radius:3px;"></span>Aportes</div>
+            <div><span style="display:inline-block; width:15px; height:15px; background:#22c55e; margin-right:5px; border-radius:3px;"></span>Ganancia</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+    <footer class="footerPrincipal">
+    <div class="containerPrincipal-footerPrincipal">
+      <div class="footerPrincipal-top">
+        <div class="supportPrincipal-info">
+          <h3>Te atendemos las 24 horas</h3>
+          <p>Haz tus trámites y consultas sin salir de casa</p>
+        </div>
+        <div class="supportPrincipal-options">
+          <a href="#" class="supportPrincipal-btn"><i class="fas fa-comment-dots"></i> Chatea con Irene</a>
+          <a href="#" class="supportPrincipal-btn"><i class="fas fa-envelope"></i> Envíanos un correo</a>
+        </div>
+      </div>
+      <div class="footerPrincipal-bottom">
+        <p class="copyrightPrincipal">© 2026 AFP Seguro - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+    <script src="../JAVASCRIPT/javascript.js"></script>
+</body>
+</html>
