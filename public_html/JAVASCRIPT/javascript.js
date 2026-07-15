@@ -571,7 +571,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (marcarLeidas && contador) marcarLeidas.addEventListener('click', (e) => { e.stopPropagation(); contador.style.display = 'none'; });
     }
 
-    // Chat Irene
+// Chat Irene
     const chatBubble = document.createElement('div');
     chatBubble.className = 'irene-chat-bubble'; chatBubble.innerHTML = '<i class="fas fa-comment-dots"></i>'; document.body.appendChild(chatBubble);
     
@@ -581,7 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="irene-chat-header">
             <div class="irene-avatar"><i class="fas fa-headset"></i></div><div class="irene-chat-header-info"><h4>Irene</h4><span>En línea</span></div><i class="fas fa-times irene-chat-close" id="irene-chat-close"></i>
         </div>
-        <div class="irene-chat-body" id="irene-chat-body"><div class="irene-msg bot">¡Hola! Soy Irene, tu asistente. ¿En qué ayudo?</div></div>
+        <div class="irene-chat-body" id="irene-chat-body"><div class="irene-msg bot">¡Hola! Soy Irene, tu asistente. ¿En qué ayudo? (Prueba escribir "simular")</div></div>
         <div class="irene-chat-quick"><button class="irene-quick-btn" data-msg="¿Cuál es mi saldo?">Saldo</button><button class="irene-quick-btn" data-msg="Hablar con un asesor">Asesor</button></div>
         <div class="irene-chat-input"><input type="text" id="irene-chat-text" placeholder="Escribe..."><button id="irene-chat-send"><i class="fas fa-paper-plane"></i></button></div>
     `;
@@ -594,10 +594,56 @@ document.addEventListener('DOMContentLoaded', () => {
         const msg = document.createElement('div'); msg.className = `irene-msg ${tipo}`; msg.textContent = texto;
         chatBody.appendChild(msg); chatBody.scrollTop = chatBody.scrollHeight;
     }
+
+    // ==========================================
+    //              CHAT IRENE
+    // ==========================================
+    function respuestaIrene(mensajeUsuario) {
+        const texto = mensajeUsuario.toLowerCase();
+        let respuesta = 'Gracias. Un asesor revisará tu consulta a la brevedad.';
+
+        if (texto.includes('simular') || texto.includes('proyeccion')) {
+            // USO DE PROMPT
+            let mesesIngresados = prompt("Irene: ¿Cuántos meses deseas proyectar tu ahorro base? (Ingresa un número)");
+
+            // BUCLE WHILE (Validación)
+            while (isNaN(mesesIngresados) || mesesIngresados <= 0) {
+                mesesIngresados = prompt("Irene: Por favor, ingresa un número válido mayor a 0 para calcular tu proyección:");
+            }
+
+            // ARREGLO BIDIMENSIONAL (Matriz)
+            let matrizProyeccion = []; 
+            let cuotaFija = 150;
+            let mesActual = 1;
+
+            // WHILE
+            while (mesActual <= mesesIngresados) {
+                matrizProyeccion.push([mesActual, cuotaFija * mesActual]);
+                mesActual++;
+            }
+
+            let totalProyectado = matrizProyeccion[matrizProyeccion.length - 1][1];
+            
+            // Arreglo bidimensional se ha guardado en la consola
+            respuesta = `¡Cálculo listo! Aportando S/ 150 mensuales, en ${mesesIngresados} meses tendrías S/ ${totalProyectado}.`;
+            console.log("Arreglo Bidimensional generado por Irene:", matrizProyeccion);
+
+        } else if (texto.includes('saldo')) {
+            respuesta = 'Puedes ver tu saldo actualizado en "Resumen" o "Mi Ahorro".';
+        } else if (texto.includes('asesor') || texto.includes('humano')) {
+            respuesta = 'Derivando tu consulta a un asesor humano. Te contactaremos pronto.';
+        } else if (texto.includes('hola') || texto.includes('buenas')) {
+            respuesta = '¡Hola! ¿En qué te ayudo? (Escribe "simular" para una proyección rápida).';
+        }
+
+        setTimeout(() => agregarMensaje(respuesta, 'bot'), 600);
+    }
+
     function enviarMensaje(texto) {
-        if (!texto.trim()) return;
-        agregarMensaje(texto, 'user');
-        setTimeout(() => agregarMensaje("Gracias. Un asesor revisará tu consulta.", 'bot'), 600);
+        const limpio = texto.trim();
+        if (!limpio) return;
+        agregarMensaje(limpio, 'user');
+        respuestaIrene(limpio); // Ahora sí conectamos con la inteligencia de Irene
     }
 
     chatBubble.addEventListener('click', () => chatWindow.classList.toggle('visible'));
